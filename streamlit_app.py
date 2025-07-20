@@ -110,7 +110,7 @@ st.set_page_config(
 )
 
 # ---- SIDEBAR NAVIGATION ----
-st.sidebar.image("company_logo.png", use_column_width=True)  # Add your logo file
+st.sidebar.image("comany_logo.jpg", use_column_width=True)  # Add your logo file
 st.sidebar.title("Navigation")
 page = st.sidebar.radio(
     "Go to",
