@@ -194,7 +194,9 @@ elif page == "Clustering":
     df['Cluster Description'] = df['Cluster'].map(st.session_state['descriptions'])
 
     st.success(f"Clustering completed with {k} clusters.")
-    cluster_summary = df.groupby('Cluster Label').agg('mean')[features]
+    numeric_features = df[features].select_dtypes(include=np.number).columns
+    cluster_summary = df.groupby('Cluster Label')[numeric_features].mean()
+
     st.write("### Cluster Centers (means):")
     st.dataframe(cluster_summary)
 
@@ -235,7 +237,7 @@ elif page == "Download":
     )
 
 st.sidebar.markdown("---")
-st.sidebar.caption("Designed by [Your Name] | Powered by Streamlit")
+st.sidebar.caption("Designed by Simrat | Powered by Streamlit")
 
 # ---- OPTIONAL: Custom CSS ----
 # Add below for advanced styling if desired
