@@ -114,7 +114,7 @@ st.sidebar.image("comany_logo.jpg", use_container_width=True)  # Add your logo f
 st.sidebar.title("Navigation")
 page = st.sidebar.radio(
     "Go to",
-    ("EDA", "Clustering", "Recommendation", "Download")
+    ("EDA", "Clustering", "Download")
 )
 
 # ---- DATA HANDLING ----
