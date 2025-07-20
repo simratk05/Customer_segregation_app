@@ -224,28 +224,7 @@ elif page == "Clustering":
 #         st.subheader(label)
 #         st.write(desc if desc else "No description provided.")
 #         # Placeholder: add business rules for recommendations here
-elif page == "Recommendation":
-    st.header("Segment Recommendations")
 
-    if 'Cluster' not in df.columns:
-        st.warning("Please complete the clustering first in the 'Clustering' tab to view recommendations.")
-    else:
-        st.write("Below are recommendations for each cluster segment (add business logic as needed):")
-
-        for i in range(df['Cluster'].nunique()):
-            label = st.session_state['cluster_labels'].get(i, f"Cluster {i}")
-            desc = st.session_state['descriptions'].get(i, "")
-
-            st.subheader(label)
-            st.write(desc if desc else "No description provided.")
-
-            # Placeholder: You can add business rules here like:
-            if "high" in label.lower() or "spender" in label.lower():
-                st.success("💸 Suggest personalized premium offers.")
-            elif "budget" in label.lower() or "low" in label.lower():
-                st.info("🪙 Suggest combo deals or loyalty points offers.")
-            else:
-                st.caption("🧐 Consider analyzing this group further.")
 
 
 elif page == "Download":
