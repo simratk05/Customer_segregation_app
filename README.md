@@ -1,11 +1,14 @@
-# Customer Seggregation App
+# Customer Segmentation App
 
 This app is a multi-page interactive Streamlit dashboard for customer segmentation based on clustering (KMeans). It supports data upload, real-time clustering config, cluster labeling, and download of results. The dataset for this app was taken from Kaggle
 
 URL= https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python/data
 
 The user can uplaod its own data, and get the clustered results. 
+
 PRO FEATURE= Users can download the csv file of the results.
+
+ACCESS THE APP FROM HERE- https://customersegregationapp0simrat.streamlit.app/
 
 ## Purpose
 
